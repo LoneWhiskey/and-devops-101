@@ -4,7 +4,6 @@ WORKDIR /var/app/hello-devops
 COPY package.json package-lock.json ./
 RUN npm install --production --silent --pure-lockfile
 COPY src ./src
-RUN mkdir test
 COPY public ./public
 RUN npm run build
 
